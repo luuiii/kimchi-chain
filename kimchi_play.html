@@ -1,0 +1,159 @@
+13:00 - 14:45 und 17:15 - 18:30
+
+python -m http.server 8000 --bind 127.0.0.1
+
+
+Halooハロ🥰
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>CCL-Website</title>
+    <meta charset="UTF-8">
+
+    <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+          background-color: black;
+          color: white;
+          padding: 30px;
+          /* margin: 50px; */
+          border: 20px solid lightblue;
+          text-align: center;
+      }
+
+      nav {
+          background-color: lightyellow;
+          padding: 20px;
+          width: 30%;
+      }
+
+      nav li {
+          list-style-type: none;
+          padding: 8px;
+      }
+
+      nav ul {
+          padding: 0;
+      }
+
+      nav li:hover {
+          background-color: yellow;
+      }
+
+      #mein-haupt-block {
+          background-color: #9999ff;
+          padding: 20px;
+          width: 70%;
+          /* background-image: linear-gradient(45deg, #9999ff, #11e); */
+          background-image: radial-gradient(at 20% 30%, #9999ff, #11e);
+      }
+
+      .column {
+          /* font-size: 40px; */
+          float: left;
+          /* background-color: green !important; */
+          height: 700px;
+      }
+
+      section:after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+
+      footer {
+          background-color: #f00;
+          /* background-color: rgba(0, 255, 0, 1); */
+          padding: 20px;
+      }
+
+      h5, h6 {
+          font-family: monospace;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Überschrift 1</h1>
+    </header>
+
+    <section>
+
+      <nav class="column cool">
+        <ul>
+          <li>Home</li>
+          <li>Bio</li>
+          <li>News</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      <div class="column" id="mein-haupt-block" onmousemove="myGradient(event)">
+        <h2>Überschrift 2</h2>
+        <h3>Überschrift 3</h3>
+        <h4>Überschrift 4</h4>
+        <h5>Überschrift 5</h5>
+        <h6>Überschrift 6</h6>
+
+        <p>
+          Halloo
+          <br/>
+          neue Zeile?
+        </p>
+
+        <p>Some text in a new line. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text.
+        <p>p in p test (so lieber nicht)</p>
+        </p>
+
+        <ul>
+          <li>List</li>
+          <li>items</li>
+          <li>ohne</li>
+          <li>Bezifferung</li>
+          <ol>
+            <li>Liste</li>
+            <li>mit</li>
+            <li>Bezifferung</li>
+          </ol>
+        </ul>
+
+      </div>
+    </section>
+
+    <footer>
+      Footer
+    </footer>
+
+    <script>
+      function myGradient(event) {
+          var elemnt = document.getElementById("mein-haupt-block");
+
+          var x = event.clientX;
+          var y = event.clientY;
+
+          var rect = elemnt.getBoundingClientRect();
+
+          x = (x - rect.x) / rect.width * 100;
+          y = (y - rect.y) / rect.height * 100;
+
+          elemnt.style.background = "radial-gradient(at " + x + "% " + y + "%, #9999ff, #11e)";
+      }
+    </script>
+
+  </body>
+
+</html>
